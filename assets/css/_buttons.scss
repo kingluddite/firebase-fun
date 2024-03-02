@@ -1,0 +1,19 @@
+@mixin button($bg-color, $text-color, $border-radius) {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: $bg-color;
+  color: $text-color;
+  text-decoration: none;
+  border-radius: $border-radius;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken($bg-color, 10%);
+  }
+}
+
+.download-btn {
+  @include button(blue, tomato, 5px);
+}
